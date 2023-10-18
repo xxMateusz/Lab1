@@ -1,9 +1,8 @@
-﻿using Lab1.Models;
+﻿using Laboratorium_3___App.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Data.Common;
 using System.Diagnostics;
 
-namespace Lab1.Controllers
+namespace Laboratorium_3___App.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,25 +22,7 @@ namespace Lab1.Controllers
         {
             return View();
         }
-        public IActionResult About(string author, int? id)
 
-        {
-            // string author = Request.Query["author"];
-            //string strid = Request.Query["id"];
-            //if(int.TryParse(strid,out var id))
-            //{
-
-            //}
-            //ViewBag.Author = author + " id = " + id;
-            if (id == null || author == null)
-            {
-                return BadRequest();
-            }
-            ViewBag.Author = author + " id= " + id;
-            return View();
-        }
-       
-            
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
